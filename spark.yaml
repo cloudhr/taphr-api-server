@@ -2,6 +2,29 @@ name: Spark RPC Server
 version: 1.0.0
 port: 46583
 endpoints:
+  - endpoint:
+      id: loginUser
+      description: handles user login
+      url: /loginUser
+  - endpoint:
+      id: getUser
+      description: retrives User Data
+      url: /getUser
+  - endpoint:
+      id: getCompanyDetails
+      descrition: Retrives Information about User
+      url: /getCompanyDetails
+router:
+  - mappings:
+      id: loginUser
+      url: /loginUser
+
+  - mappings:
+
+
+
+
+
 
 
 

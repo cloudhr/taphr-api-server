@@ -1,0 +1,11 @@
+{
+  "name":"taphr-rpc",
+  "version":"1.0.0",
+  "server":{
+    "rootPath":"/rpc",
+    "port":"3100"
+  },
+  "endpoints":{
+
+  }
+}
