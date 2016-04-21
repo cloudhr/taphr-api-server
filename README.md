@@ -30,7 +30,7 @@ Ideally each Module should be in its own repo in the format
 
 ## The API Server
 This is just a resource server that assembles all the modules together and 
-exposes endpoints based the different type of membership categories. 
+exposes endpoints based on the different types of membership categories. 
 Each Membership type will live in its own DNS.
 
 ## How feature modules interact with the API server
@@ -39,16 +39,22 @@ the native require function and catching any require errors. This separate
 module per feature strategy lets us deploy different types of app with different 
 features included. This way then can get Go Server to build and deploy a certain 
 group of features to an AWS instance based on Config Settings. 
-Also When we update a module all instance.
 
 ## API versioning and Feature Module Versioning
 Each module semver change should cause a subsequent change in the API version.
 We will use the semver module to achieve this.
 
 ## Feature Module Architecture
-Each module should be archtected follow a certain conventions. 
-Like it should expose certain APIs, consume certain backing services 
-like DBs and other Restful APIs
+Each module should be architected to follow a certain conventions. 
+Like it how it should expose certain APIs, consume certain backing services 
+like DBs and other Restful APIs. There should be a special module loader/integrator that
+takes care of binding it to the main api server.
 
 ## API Consumabilty and Tooling
 We should strive to generate a Swagger file for Each API
+
+## API Security
+Know that API server is just acting as a resource server only. It doesnt take care of . 
+Ideally we should deligate Identity management to a completely seperate process in a federated way so
+this way we can reuse identity with the help of tokens for many other internal services/modules. 
+Put simply you are only allowed to to use a module if you have a valid token with the right scope/authorization
