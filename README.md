@@ -57,4 +57,4 @@ We should strive to generate a Swagger file for Each API
 Know that API server is just acting as a resource server only. It doesnt take care of . 
 Ideally we should deligate Identity management to a completely seperate process in a federated way so
 this way we can reuse identity with the help of tokens for many other internal services/modules. 
-Put simply you are only allowed to to use a module if you have a valid token with the right scope/authorization
+Put simply you are only allowed to to use a module if you have a valid token with the right scope/authorization.
