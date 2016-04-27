@@ -1,6 +1,8 @@
 branch-defaults:
   master:
-    environment: null
+    environment: taphr-api-server-dev
+deploy:
+  artifact: ../api_server.zip
 global:
   application_name: taphr-api-server
   default_ec2_keyname: null
@@ -8,5 +10,3 @@ global:
   default_region: eu-west-1
   profile: eb-cli
   sc: git
-deploy:
-  artifact: ../api_server.zip
