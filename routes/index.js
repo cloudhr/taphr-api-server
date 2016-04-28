@@ -3,14 +3,18 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.status(200).json({
+    status:'ok',
+    message:'API Server is running fine',
+    code:200
+  });
 });
 
 router.route('/health')
     .get(function(req, res, next){
   res.status(200).json({
     status:'ok',
-    message:'API Server is running fine',
+    message:'API Server is healthy',
     code:200
   });
 }).head(function(req, res, next){
