@@ -1,8 +1,6 @@
 branch-defaults:
   master:
     environment: taphr-api-server-dev
-deploy:
-  artifact: ../api_server.zip
 global:
   application_name: taphr-api-server
   default_ec2_keyname: null
