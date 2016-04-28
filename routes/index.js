@@ -6,4 +6,18 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.route('/health')
+    .get(function(req, res, next){
+  res.status(200).json({
+    status:'ok',
+    message:'API Server is running fine',
+    code:200
+  });
+}).head(function(req, res, next){
+  res.status(200).json({
+    status:'ok',
+    code:200
+  });
+});
+
 module.exports = router;
